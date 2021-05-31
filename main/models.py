@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class word():
+    polish : str
+    english : str
+    dutch : str

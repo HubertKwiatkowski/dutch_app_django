@@ -3,14 +3,9 @@ from django.shortcuts import render
 
 def home(request):
     something = "banana"
-    example = 1 + 1
+    button = [1000, 1100, 1200, 1300, 1400, 1500]
 
     return render(request, 'home.html', {
         'dutch_word': something,
-        'button1': example,
-        'button2': example,
-        'button3': example,
-        'button4': example,
-        'button5': example,
-        'button6': example,
+        'buttons': button,
         })
