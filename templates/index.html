@@ -3,12 +3,12 @@
 {% block content%}
 
     <div>
-        <h1>App to help learn Dutch words</h1>
-
-        <div><h3>{{dutch_word}}</h3></div>
+        <div><h2>{{dutch_word}}</h2></div>
         {% for button in buttons %}
         <div>
-            <button name="submit">{{button}}</button>
+            <a href="{% url 'main:answer' %}">
+                <button type="button" id="{{button}}">{{button}}</button>
+            </a>
         </div>
 
         {% endfor %}

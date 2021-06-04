@@ -2,7 +2,7 @@ from django.shortcuts import render
 from .models import Word
 import random
 
-def home(request):
+def index(request):
     quiz = generateQuestion()
 
     dutchWord = quiz[0]
@@ -13,10 +13,14 @@ def home(request):
 
     random.shuffle(answerOptions)
 
-    return render(request, 'home.html', {
+    return render(request, 'index.html', {
         'dutch_word': dutchWord,
         'buttons': answerOptions,
         })
+
+def answer(request):
+    
+    return render(request, 'answer.html')
 
 def generateQuestion():
     words = list(Word.objects.all())
