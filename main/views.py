@@ -13,14 +13,14 @@ def index(request):
 
     random.shuffle(answerOptions)
 
-    return render(request, 'index.html', {
-        'dutch_word': dutchWord,
+    return render(request, 'main/index.html', {
+        'dutchWord': dutchWord,
         'buttons': answerOptions,
         })
 
 def answer(request):
     
-    return render(request, 'answer.html')
+    return render(request, 'main/answer.html')
 
 def generateQuestion():
     words = list(Word.objects.all())

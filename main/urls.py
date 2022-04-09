@@ -7,5 +7,5 @@ app_name = 'main'
 urlpatterns = [
     # Home page.
     path('', views.index, name='index'),
-    path('/answer', views.answer, name='answer'),
+    path('answer/', views.answer, name='answer'),
 ]
