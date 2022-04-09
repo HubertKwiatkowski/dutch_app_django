@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'dutch_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todolist',
+        'NAME': 'dutch_app',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',
