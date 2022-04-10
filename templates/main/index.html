@@ -1,18 +1,5 @@
-{% extends "dutch_app/base.html" %}
+{% extends "main/base.html" %}
 
 {% block content %}
-
-    <div>
-        <div><h2>{{ dutchWord }}</h2></div>
-        {% for button in buttons %}
-        <div>
-            <a href="{% url 'main:answer' %}">
-                <button type="button" id="{{button}}">{{button}}</button>
-            </a>
-        </div>
-
-        {% endfor %}
-    
-    </div>
-
+<h1>Main page</h1>
 {% endblock content %}
