@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     # My apps.
     'main',
     'quiz',
+    'learning',
 
     # Default django apps.
     'django.contrib.admin',

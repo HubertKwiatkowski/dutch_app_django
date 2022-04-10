@@ -2,6 +2,9 @@ from django.shortcuts import render
 from .models import Word
 import random
 
+def index(request):
+    return render(request, 'quiz/index.html')
+
 def question(request):
     quiz = generateQuestion()
 
@@ -13,10 +16,12 @@ def question(request):
 
     random.shuffle(answerOptions)
 
-    return render(request, 'main/index.html', {
+    context = {
         'dutchWord': dutchWord,
         'buttons': answerOptions,
-        })
+        }
+
+    return render(request, 'main/index.html', context)
 
 def answer(request):
     return render(request, 'main/answer.html')
@@ -34,4 +39,3 @@ def generateQuestion():
         wrongAnswers.append(w.dutch)
 
     return question, correctAnswer, wrongAnswers
-

@@ -6,8 +6,8 @@
         <div><h2>{{ dutchWord }}</h2></div>
         {% for button in buttons %}
         <div>
-            <a href="{% url 'main:answer' %}">
-                <button type="button" id="{{button}}">{{button}}</button>
+            <a href="{% url 'quiz:answer' %}">
+                <button type="button" id="{{button}}">{{ button }}</button>
             </a>
         </div>
 
