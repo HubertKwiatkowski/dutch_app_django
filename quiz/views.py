@@ -1,3 +1,4 @@
+from tkinter import Button
 from django.shortcuts import render
 from .models import Word
 import random
@@ -5,14 +6,14 @@ import random
 def index(request):
     return render(request, 'quiz/index.html')
 
-def question(request):
+def milionere(request):
     quiz = generateQuestion()
 
     dutchWord = quiz[0]
-    correctAnswer = quiz[1]
-    wrongAnswers = quiz[2]
+    answerCorrect = quiz[1]
+    answerWrong = quiz[2]
 
-    answerOptions = [correctAnswer] + wrongAnswers
+    answerOptions = [answerCorrect] + answerWrong
 
     random.shuffle(answerOptions)
 
@@ -20,8 +21,8 @@ def question(request):
         'dutchWord': dutchWord,
         'buttons': answerOptions,
         }
-
-    return render(request, 'main/index.html', context)
+    print(answerOptions[0])
+    return render(request, 'quiz/milionere.html', context)
 
 def answer(request):
     return render(request, 'main/answer.html')

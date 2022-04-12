@@ -1,0 +1,20 @@
+{% extends "main/base.html" %}
+
+{% block content %}
+    <div >
+        
+        <div class="container">
+            <div>
+                <h2>{{ dutchWord }}</h2>
+            </div>
+            <div class="col">
+                {% for button in buttons %}
+                <a href="">
+                    <button type="button" id="{{ button }}" class="btn btn-secondary">{{ button }}</button>
+                </a>
+                {% endfor %}
+            </div>
+            
+        </div>  
+    </div>
+{% endblock content %}
